@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import { ImageWrapper } from '../../styles/resusableStyles';
 import { CardOverlay, CardWrapper, TextContainer } from './styles';
-import { playPause, setActiveSong, setSongList } from '../../redux/features/musicPlayer';
+import { playPause, setActiveSong, setSongList, setCurrentSongData } from '../../redux/features/musicPlayer';
 import { PlayOrPause } from '..';
 
 const SongArtistCard = ({coverArt, title, subtitle, artist, songKey, activeSong, isPlaying, song, songList, data, i }) => {
@@ -12,13 +12,14 @@ const SongArtistCard = ({coverArt, title, subtitle, artist, songKey, activeSong,
   const currentSongImg = activeSong === song;
   
   const handlePlayClick = () => {
-    dispatch(setActiveSong({song, data, i}));
+    dispatch(setActiveSong({song, i}));
+    dispatch(setCurrentSongData({data}));
     dispatch(setSongList({songList}));
     dispatch(playPause(true));
   };
   
   const handlePauseClick = () => {
-    dispatch(setActiveSong({song, data, i}));
+    dispatch(setActiveSong({song, i}));
     dispatch(playPause(false));
   };
   

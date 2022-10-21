@@ -2,17 +2,15 @@ import React from 'react'
 
 import { TrackWrapper, CoverArtContainer, CoverArtImage, TitleContainer, Title, Subtitle } from './styles';
 
-const CurrentTrack = ({ currentSongData }) => {
-  const {images, title, subtitle} = currentSongData;
-
+const CurrentTrack = ({ artistImage, artistTitle, artistSubtitle }) => {
   return (
     <TrackWrapper>
       <CoverArtContainer>
-        <CoverArtImage src={images.coverart} alt="artist-cover" />
+        <CoverArtImage src={artistImage} alt="artist-cover" />
       </CoverArtContainer>
       <TitleContainer>
-        <Title>{title}</Title>        
-        <Subtitle>{subtitle}</Subtitle>
+        <Title>{artistTitle}</Title>        
+        <Subtitle>{artistSubtitle}</Subtitle>
       </TitleContainer>
     </TrackWrapper>
   )
