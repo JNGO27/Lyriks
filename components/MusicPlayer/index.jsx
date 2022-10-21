@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { playPause, nextSong, prevSong } from '../../redux/features/musicPlayer';
-import {  MusicPlayerWrapper,  MusicPlayerContainer,  ControlSeekbarWrapper, AudioPlayerVolumeBarWrapper } from './styles';
+import { MusicPlayerWrapper, MusicPlayerContainer, ControlSeekbarWrapper,AudioPlayerVolumeBarWrapper,
+} from './styles';
+
 import { AudioPlayer, CurrentTrack, Controls, SeekBar, VolumeBar } from './index';
 
 const MusicPlayer = () => {

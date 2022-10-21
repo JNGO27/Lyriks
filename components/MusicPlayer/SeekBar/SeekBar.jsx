@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-import { SliderContainer, ProgressBarCover, Thumb, AudioInputSlider} from './styles';
+import { Container, SliderContainer, ProgressBarCover, Thumb, AudioInputSlider } from './styles';
 
 const SeekBar = ({ value, min, max, onChange, percentage = 0 }) => {
   const [position, setPosition] = useState(0);
@@ -24,13 +24,13 @@ const SeekBar = ({ value, min, max, onChange, percentage = 0 }) => {
   }, [percentage]);
   
   return (
-    <>
+    <Container>
+      <p>{value === 0 ? '0:00' : getTime(value)}</p>
       <SliderContainer>
         <ProgressBarCover progressBarWidth={progressBarWidth} />
         
         <Thumb ref={thumbRef} left={position} marginLeft={marginLeft} /> 
         
-        <p className="text-white">{value === 0 ? '0:00' : getTime(value)}</p>
         
         <AudioInputSlider 
           type="range"
@@ -42,9 +42,9 @@ const SeekBar = ({ value, min, max, onChange, percentage = 0 }) => {
           ref={rangeRef}
         />
           
-        <p className="text-white">{max === 0 ? '0:00' : getTime(max)}</p>
       </SliderContainer>
-    </>
+      <p>{max === 0 ? '0:00' : getTime(max)}</p>
+    </Container>
   )
 }
 

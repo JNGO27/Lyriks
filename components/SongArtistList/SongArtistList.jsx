@@ -12,7 +12,7 @@ const SongArtistList = ({ data, isSearch }) => {
   return (
     <CardWrapper>
       {dataToRender?.map(({images, title, subtitle, key, artists, hub}, idx) => {
-        if (images.coverart && title && subtitle) {
+        if (images?.coverart && title && subtitle) {
           return (
             <SongArtistCard
               key={idx}

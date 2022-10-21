@@ -1,19 +1,31 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media (${(props) => props.theme.queries.smallAndDown}) {
+    display: none;
+  }
+`
+
 export const SliderContainer = styled.div`
  --progress-bar-height: 4px;
- --thumb-width: 20px;
- --thumb-height: 20px;
+ --thumb-width: 15px;
+ --thumb-height: 15px;
  
+ display: flex;
  position: relative;
  width: 100%;
 
  &::before {
   content: '';
   background-color: white;
-  width: 80%;
+  width: 100%;
   height: calc(var(--progress-bar-height) - 1px);
-  display: block;
+  display: flex;
   position: absolute;
   border-radius: 10px;
   top: 50%;
@@ -24,7 +36,7 @@ export const SliderContainer = styled.div`
 `;
 export const ProgressBarCover = styled.div`
  background-color: rgb(218, 55, 145);
- width: ${props => props.progressBarWidth ? `${props.progressBarWidth}px` : '0%'};
+ width: ${props => `${props.progressBarWidth}px`};
  height: var(--progress-bar-height);
  display: block;
  position: absolute;
