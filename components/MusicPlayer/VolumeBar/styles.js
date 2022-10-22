@@ -10,6 +10,7 @@ export const VolumeBarWrap = styled.div`
 export const VolumeBarInput = styled.input`
  height: 0.25rem;
  margin-left: 0.5rem;
+ background: black;
 
  cursor: pointer;
 `;

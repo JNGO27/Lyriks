@@ -10,7 +10,6 @@ const VolumeBar = ({ value, min, max, onChange, setVolume }) => {
       {value <= 1 && value > 0.5 && 
         (<BsFillVolumeUpFill 
           size={25} 
-          color="#FFF" 
           onClick={() => setVolume(0)} 
         />
       )}
@@ -18,7 +17,6 @@ const VolumeBar = ({ value, min, max, onChange, setVolume }) => {
       {value <= 0.5 && value > 0 && 
         (<BsVolumeDownFill 
           size={25} 
-          color="#FFF" 
           onClick={() => setVolume(0)} 
         />
       )}
@@ -26,7 +24,6 @@ const VolumeBar = ({ value, min, max, onChange, setVolume }) => {
       {value === 0 && ( 
         <BsFillVolumeMuteFill 
           size={25} 
-          color="#FFF" 
           onClick={() => setVolume(1)} 
         />
       )}

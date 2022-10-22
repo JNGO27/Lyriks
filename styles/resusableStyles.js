@@ -33,4 +33,22 @@ export const ImageWrapper = styled.div`
       }
     }
   }
+
+  @media (pointer: coarse) {
+    img {
+      opacity: 0.85;
+    }
+
+    svg {
+      display: block;
+      position: absolute;
+      inset: 0;
+      margin: auto;
+
+      width: 25%;
+      height: 25%;
+
+      opacity: 0.5;
+    }
+  }
 `;

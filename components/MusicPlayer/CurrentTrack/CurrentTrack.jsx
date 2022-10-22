@@ -2,17 +2,15 @@ import Image from 'next/image';
 
 import { TrackWrapper, CoverArtContainer, CoverArtImage, TitleContainer, Title, Subtitle } from './styles';
 
-const CurrentTrack = ({ currentSongData }) => {
-  const { images, title, subtitle } = currentSongData;
-
+const CurrentTrack = ({ artistImage, artistTitle, artistSubtitle }) => {
   return (
     <TrackWrapper>
       <CoverArtContainer>
-        <Image src={images.coverart} width={65} height={65} objectFit="cover" />
+        <Image src={artistImage} width={65} height={65} objectFit="cover" />
       </CoverArtContainer>
       <TitleContainer>
-        <Title>{title}</Title>        
-        <Subtitle>{subtitle}</Subtitle>
+        <Title>{artistTitle}</Title>        
+        <Subtitle>{artistSubtitle}</Subtitle>
       </TitleContainer>
     </TrackWrapper>
   )

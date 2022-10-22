@@ -13,8 +13,8 @@ export const Container = styled.div`
 
 export const SliderContainer = styled.div`
  --progress-bar-height: 4px;
- --thumb-width: 15px;
- --thumb-height: 15px;
+ --thumb-width: 18px;
+ --thumb-height: 18px;
  
  display: flex;
  position: relative;
@@ -35,7 +35,7 @@ export const SliderContainer = styled.div`
  }
 `;
 export const ProgressBarCover = styled.div`
- background-color: rgb(218, 55, 145);
+ background-color: ${props => props.theme.colors.blacks[300]};
  width: ${props => `${props.progressBarWidth}px`};
  height: var(--progress-bar-height);
  display: block;
@@ -48,19 +48,18 @@ export const ProgressBarCover = styled.div`
  pointer-events: none;
 `;
 export const Thumb = styled.div`
- width: var(--thumb-width);
- height: var(--thumb-height);
- box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.753);
- z-index: 3;
- background: rgb(252, 255, 25, 1);
- position: absolute;
- left: ${props => `${props.left}%`};
- margin-left: ${props => `${props.marginLeft}px`};
- border-radius: 50%;
- top: 50%;
- transform: translate(0%, -50%);
- pointer-events: none;
- user-select: none;
+  width: var(--thumb-width);
+  height: var(--thumb-height);
+  z-index: 3;
+  background: ${props => props.theme.colors.gradients.gold};
+  position: absolute;
+  left: ${props => `${props.left}%`};
+  margin-left: ${props => `${props.marginLeft}px`};
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  pointer-events: none;
+  user-select: none;
  `;
  
  export const AudioInputSlider = styled.input`
