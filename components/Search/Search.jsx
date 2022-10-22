@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { BsSearch } from 'react-icons/bs';
-import { GiHamburgerMenu } from 'react-icons/gi';
-
+import { ModalSidebar } from '../';
 import { SearchWrapper, GradientWrapper, IconWrapper, MenuIconWrapper } from './styles';
 import { setSearchQuery } from '../../redux/features/currentSongArtistList';
 
@@ -29,7 +28,7 @@ const Search = ({ searchGridArea }) => {
   return (
     <SearchWrapper searchGridArea={searchGridArea}>
       <MenuIconWrapper>
-        <GiHamburgerMenu />
+        <ModalSidebar />
       </MenuIconWrapper>
       <GradientWrapper>
         <IconWrapper>

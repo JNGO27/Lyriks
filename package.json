@@ -13,9 +13,11 @@
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-focus-lock": "^2.9.1",
     "react-icons": "^4.4.0",
     "react-redux": "^8.0.4",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "styled-react-modal": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "8.23.1",

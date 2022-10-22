@@ -80,7 +80,7 @@ export const MenuIconWrapper = styled.div`
       position: absolute;
       left: 20px;
       top: 25px;
-      color: ${(props) => props.theme.colors.grays[100]};
+      color: ${(props) => props.theme.colors.grays[200]};
     }
   }
 `;

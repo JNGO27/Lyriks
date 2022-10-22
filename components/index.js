@@ -6,6 +6,7 @@ export { default as MusicPlayer } from './MusicPlayer/index.jsx';
 export { default as Logo } from './Logo/Logo';
 export { default as Search } from './Search/Search';
 export { default as LeftSidebar } from './LeftSidebar/LeftSidebar';
+export { default as ModalSidebar } from './ModalSidebar/ModalSidebar';
 export { default as SongInformation } from './SongInformation/SongInformation';
 export { default as SongArtistList } from './SongArtistList/SongArtistList';
 export { default as SongArtistCard } from './SongArtistCard/SongArtistCard';
