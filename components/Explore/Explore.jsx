@@ -1,13 +1,13 @@
 import { MainContentWrapper } from './styles';
-import { Search, SongArtistList } from '..';
+import { Search, SongArtistList, Loader, Error } from '..';
 import { useGetWorldChartsByGenreOrSearchQuery } from '../../redux/services/shazamCoreApi';
 
 const Explore = () => {
   const { data, isFetching, error } = useGetWorldChartsByGenreOrSearchQuery({ genreCode: 'ROCK' });
   
-  if (isFetching) return '...Loading - Test Loader';
+  if (isFetching) return <Loader />;
 
-  if (error) return 'Error - Test Error';  
+  if (error) return <Error />;  
   
   return (
     <MainContentWrapper>
