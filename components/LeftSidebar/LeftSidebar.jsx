@@ -8,7 +8,7 @@ import sidebarIcons from '../../assets/images/sidebarIcons/index';
 
 const linksArray = [
   { label: 'Home', to: '/home' },
-  { label: 'Explore', to: '/explore' },
+  // { label: 'Explore', to: '/explore' },
   { label: 'Artists', to: '/globalCharts' },
   // { label: 'Albums', to: '/albums' },
 ];
