@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 
@@ -6,6 +8,13 @@ import { Layout } from '../components';
 import store from '../app/store';
 
 const MyApp = ({ Component, pageProps }) => {
+  const router = useRouter();
+  console.log(router)
+
+  useEffect(() => {
+    if (router.asPath === '/') router.push('/home');
+  }, []);
+
   return (
     <Provider store={store}>
       <ThemeProvider theme={{ colors: COLORS, queries: QUERIES }}>
