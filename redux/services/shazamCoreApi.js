@@ -25,7 +25,7 @@ export const shazamCoreApi = createApi({
     }),
 
     getArtistDetails: builder.query({
-      query: ({ artistCode }) => `/artists/details?artist_id=${artistCode}`
+      query: ({ artistCode }) => `https://shazam-core.p.rapidapi.com/v2/artists/details?artist_id=${artistCode}`
     }),
 
     getSongDetails: builder.query({
