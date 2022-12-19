@@ -22,7 +22,7 @@ const MusicPlayer = () => {
   const audioRef = useRef(null);
 
   const currentSongDataLengthIs = Object.keys(listOfSongs).length;
-  
+
   const onChange = (e) => {
     const audio = audioRef.current;
     

@@ -10,11 +10,10 @@ import store from '../app/store';
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
-  console.log(router)
 
   useEffect(() => {
     if (router.asPath === '/') router.push('/home');
-  }, []);
+  }, [router]);
 
   return (
     <ModalProvider>

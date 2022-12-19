@@ -9,14 +9,15 @@ import { ArtistInformationWrapper, ArtistGradientWrapper, ArtistWrapper, ArtistT
 const ArtistInformation = ({ artistData, songs }) => {
   const { isPlaying, activeSong } = useSelector((state) => state.musicPlayer);
   
-  
+  console.log(songs)
+
   return (
     <>
       <ArtistInformationWrapper>
           <Search searchGridArea={'artist-content-search'}/>
         <ArtistWrapper>
           <ArtistGradientWrapper>
-            <Image src={artistData?.attributes?.artwork?.url.replace('{w}', '500').replace('{h}', '500')} width={450} height={450} />
+            <Image src={artistData?.attributes?.artwork?.url} width={450} height={450} />
           </ArtistGradientWrapper>
           <ArtistTextInformation>
               <h2>{artistData.attributes.name}</h2>
@@ -24,15 +25,15 @@ const ArtistInformation = ({ artistData, songs }) => {
           </ArtistTextInformation>
         </ArtistWrapper>
           <RelatedSongsHeading>
-            <h2>Related Songs:</h2>
+            <h2>{songs.attributes.title}:</h2>
           </RelatedSongsHeading>
           <RelatedSongsList>
-            {songs.map(({id, attributes}, idx)=> (
+            {songs.data.map(({id, attributes}, idx)=> (
               <RelatedSong key={id}>
                 <Number>{idx + 1}</Number>
                 <ImageWrapper>
-                  <Image src={attributes?.artwork?.url.replace('{w}', '125').replace('{h}', '125')} width={125} height={125} objectFit="cover" />
-                  <ArtistSongPlayer song={songs[idx].attributes?.previews[0].url} data={songs[idx]} i={idx} isPlaying={isPlaying} activeSong={activeSong} songList={songs}/>
+                  <Image src={attributes?.artwork?.url} width={125} height={125} objectFit="cover" />
+                  <ArtistSongPlayer song={attributes?.previews[0]?.url} data={songs.data[idx]} i={idx} isPlaying={isPlaying} activeSong={activeSong} songList={songs.data}/>
                 </ImageWrapper>
                 <RelatedSongsTextContainer>
                   <h3>{attributes?.name}</h3>
