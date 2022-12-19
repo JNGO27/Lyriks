@@ -80,7 +80,7 @@ const musicPlayer = createSlice({
   },
 
   prevSong: (state, action) => {
-    if (state.listOfSongs[action.payload]?.key && state.listOfSongs.length === 49) {
+    if (state.listOfSongs[action.payload]?.key && state.listOfSongs.length >= 45) {
       state.activeSong = state.listOfSongs[action.payload].hub?.actions[1].uri;
       state.currentSongData = state.listOfSongs[action.payload];
       
