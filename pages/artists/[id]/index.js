@@ -7,7 +7,7 @@ const ArtistPage = ({ artistCode }) => {
 
   if (error) return <Error />;
   
-  return <ArtistInformation artistData={data?.artists[artistCode]} songs={Object.values(data?.songs)} />;
+  return <ArtistInformation artistData={data.data[0]} songs={data.data[0].views["top-songs"]} />;
 }
 
 export default ArtistPage;
