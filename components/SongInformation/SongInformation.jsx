@@ -17,8 +17,8 @@ const SongInformation = ({ songData }) => {
   
   if (error) return <Error />;
   
-  const songs = Object.values(data?.songs);
-  const artistData = data?.artists[artistCode];
+  const songs = data.data[0].views["top-songs"];
+  const artistData = data.data[0];
   
   return (
     <>
@@ -26,7 +26,7 @@ const SongInformation = ({ songData }) => {
           <Search searchGridArea={'artist-content-search'}/>
         <ArtistWrapper>
           <ArtistGradientWrapper>
-              <Image src={artistData?.attributes?.artwork?.url.replace('{w}', '500').replace('{h}', '500')} width={450} height={450} priority />
+              <Image src={artistData?.attributes?.artwork?.url} width={450} height={450} priority />
           </ArtistGradientWrapper>
           <ArtistTextInformation>
               <h2>{artistData.attributes.name}</h2>
@@ -47,12 +47,12 @@ const SongInformation = ({ songData }) => {
             <h2>Related Songs:</h2>
           </RelatedSongsHeading>
           <RelatedSongsList>
-            {songs.map(({id, attributes}, idx)=> (
+            {songs.data.map(({id, attributes}, idx)=> (
               <RelatedSong key={id}>
                 <Number>{idx + 1}</Number>
                 <ImageWrapper>
-                  <Image src={attributes?.artwork?.url.replace('{w}', '125').replace('{h}', '125')} width={125} height={125} objectFit="cover" />
-                  <ArtistSongPlayer song={songs[idx].attributes?.previews[0].url} data={songs[idx]} i={idx} isPlaying={isPlaying} activeSong={activeSong} songList={songs}/>
+                  <Image src={attributes?.artwork?.url} width={125} height={125} objectFit="cover" />
+                  <ArtistSongPlayer song={attributes?.previews[0]?.url} data={songs.data[idx]} i={idx} isPlaying={isPlaying} activeSong={activeSong} songList={songs.data}/>
                 </ImageWrapper>
                 <RelatedSongsTextContainer>
                 <h3>{attributes?.name}</h3>
