@@ -60,7 +60,7 @@ Make sure you have all the necessary prerequisites installed on your system. Fol
   1. Create a **`.env`** file in the root of the project.
   2. Add the following variables to the **`.env`** file, replacing the placeholder values with your own:
   ```jsx
-  SHAZAM_API_KEY=<your-shazam-api-key>
+  NEXT_PUBLIC_SHAZAM_CORE_API_API_KEY=<your-shazam-api-key>
   ```
   1. Save the **`.env`** file.
      This environment variable is required for accessing the RapidAPI Shazam Core API, which is used to retrieve songs and their lyrics, as well as to search for and display top global songs, artists, and charts. Be sure to replace the placeholder value with your API key obtained from the RapidAPI Shazam Core service.
