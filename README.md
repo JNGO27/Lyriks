@@ -12,7 +12,7 @@ https://lyriks-music-jngo27.vercel.app/home
 
 ### Built With
 
-This application is built using many in-demand technologies, including Next.js for server-rendered React apps, TypeScript for type-checking and improved code maintainability, Redux Toolkit for managing application state, and Tailwind for rapid UI development. The application also utilizes the Shazam API to provide music recognition and discovery functionality. These technologies were carefully chosen to provide music lovers with a reliable and user-friendly experience.
+This application is built using many in-demand technologies, including Next.js for server-rendered React apps, Redux Toolkit for managing application state, and Styled-Components to use the best bits of ES6 and CSS to style your apps without stress. The application also utilizes the Shazam API to provide music recognition and discovery functionality. These technologies were carefully chosen to provide music lovers with a reliable and user-friendly experience.
 
 - **[Next.js](https://nextjs.org/)** - Next.js is a framework for building server-rendered or statically-exported React apps. It provides a set of tools and conventions for building scalable, high-performance web applications with React.
 - **[Redux Toolkit](https://redux-toolkit.js.org/)** - Redux Toolkit is a set of opinionated libraries and utilities for building Redux applications. It provides a simple and easy-to-use API for managing application state, as well as many other helpful utilities and features.
@@ -47,7 +47,7 @@ Make sure you have all the necessary prerequisites installed on your system. Fol
   ```bash
   git clone https://github.com/JNGO27/Lyriks.git
   ```
-- This will create a new directory called "BitByBit_Lyriks" in the current location, containing the code for the Lyrics project.
+- This will create a new directory called "Lyriks" in the current location, containing the code for the Lyrics project.
 - Navigate to the project directory by running the following command:
   ```bash
   cd Lyriks
@@ -75,8 +75,7 @@ This will start the development server and open the Lyrics application in your d
 
 - A library of songs and lyrics: Browse and view the lyrics of a large selection of songs from various artists and genres.
 - Top songs and artists: A feature that showcases the most popular songs and artists currently trending or historically popular.
-- Country songs: Browse songs depending on the location
-- Albums: Browse and view the track lists and lyrics for various albums.
+- Top Artists: Browse and view the top artists by genre and their top tracks.
 - Search functionality: Search for specific songs or artists using keywords.
 - Audio playback: Stream or play songs directly
 - Mobile responsive: Optimized for use on mobile devices, with a layout and user interface that adjusts and scales appropriately to fit the screen size and resolution of the device being used.
